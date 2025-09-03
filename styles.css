@@ -59,6 +59,62 @@ body{
     color: black;
 }
 
+.container {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+
+.slider-wrapped{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slider {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slider img{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-nav a{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: beige;
+    display: block;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    background: #ff6b81;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+
 aside {
     width: 250px;
 
