@@ -10,7 +10,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="the-header">
       <div class="logo">
         <img src="/img/logo.png" alt="Logo del sitio" width="115px">
       </div>
@@ -24,13 +24,16 @@
       </nav>
   </header>
 
-      <section class="container">
+  <main>
+      <section class="container-slider" id="home-hero">
         <div class="slider-wrapped">
+
           <div class="slider">
-            <img id= "slider-1" src="/img/torta_perro.jpg" alt="Torta perro">
-            <img id= "slider-2" src="/img/galletitas.jpg" alt="Galletitas">
-            <img id= "slider-3" src="/img/cupcakes.jpg" alt="Cupcakes">
+            <img id="slider-1" src="img/snacksdulces.png">
+            <img id="slider-2" src="img/snacksalado.png">
+            <img id="slider-3" src="img/cumples.png">
           </div>
+
           <div class="slider-nav">
             <a href="#slider-1"></a>
             <a href="#slider-2"></a>
@@ -38,40 +41,44 @@
           </div>
         </div>        
       </section>
-    
-  
 
-  <main>
-    <section class="product-container">
-      Productos
-      <div class="product-item">
-        <img src=".img/torta_perro.jpg" alt="Torta perro" width="100px">
+      <div class="container-options">
+        <div class="option-dog">
+            <div>
+              <h2>PERROS</h2>
+            </div>
+            <div class="dog-picture">
+              <img decoding="async" width="400" src="/img/perro.png">
+            </div>
+            <button class="btn-option">ver productos</button>
+        </div>
+      <div class="option-cat">
+          <div>
+              <h2>GATOS</h2>
+            </div>
+            <div class="cat-picture">
+              <img decoding="async"   width= "400" src="img/gato.png">
+            </div>
+            <button class="btn-option">ver productos</button>
       </div>
-    </section>
-  </main>  
-
+      </div>
+    </main>
 
 
 <footer>  
-    <div>
-      <ul>
-          <p>NAVEGACIÓN</p>
-            <li><a href="#">Iniciar sesión</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-      </ul>
+    <div class="first-column">
+      <p>Explorar</p>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Productos</a>
+      <a href="#">Preguntas frecuentes</a>
     </div>
-
     <div>
-        <ul>
-          <p>REDES SOCIALES</p>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-        </ul>
-      </div>
-
+      <div class="second-column">
+      <p>Contacto</p>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
 </footer>
 
 </body>

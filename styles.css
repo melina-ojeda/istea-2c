@@ -3,13 +3,12 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0%;
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
 }
 
 body{
-    background-color: #f9f9f7;
+    background-color: #fcc1c4;
 }
 
 .header{
@@ -59,113 +58,151 @@ body{
     color: black;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  position: relative;
-}
-
-
 .slider-wrapped{
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .slider {
-  display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
 }
 
-.slider img{
-    flex: 0 0 100%;
+.slider img {
+    flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
 }
 
 .slider-nav {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 10px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .slider-nav a{
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: beige;
     display: block;
+    opacity: 0.6;
     transition: opacity ease 250ms;
 }
 
 .slider-nav a:hover{
-    background: #ff6b81;
+    opacity: 1;
 }
 
 .slider::-webkit-scrollbar {
-  display: none;
-}
-
-
-aside {
-    width: 250px;
-
+    display: none;
 }
 
 main {
     display: flex;
-    flex-direction: row;
-    padding: 20px;
-    min-height: 70vh;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-options {
+    display: flex;
+    column-gap: 100px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.option-dog,
+.option-cat {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.option-dog h2,
+.option-cat h2 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.option-dog img,
+.option-cat img{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+
+.dog-picture img,
+.cat-picture img {
+    display: block;
+    margin: 0 auto 10px auto;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.dog-picture img:hover,
+.cat-picture img:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: scale(1.02);
+}
+
+.btn-option {
+    padding: 10px 20px;
+    background-color: #2e5346;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn-option:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
 }
 
 footer {
-    height: 50px;
-    background-color: blueviolet;
-    padding: 10px;
-
+        background-color: #96c6b5;
+        padding: 30px 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
 }
 
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    flex-grow: 1;
-    padding: 10px;
+.first-column,
+.second-column {
+  display: flex;
+  flex-direction: column;
 }
 
-.product-item {
-    background-color: bisque;
-    padding: 10px;
-    border: 1px;
-    border-radius: 5px;
-
+footer p {
+  font-size: 22px;
+  font-weight: 600;
 }
 
-
-
-.slider {
-  aspect-ratio: 10/16;
-  display: flex; /* Muestra las imágenes en fila */
-  width: 300px; /* O el ancho que necesites */
-  position: relative;
-  overflow: scroll;
-  scroll-snap-type: x mandatory;
-}
-
-.slider img {
-  width: 100%;
-  left: 0;
-  position: sticky;
-  scroll-snap-align: center; /* Alinea el inicio de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra el área */
-  border-radius: 5px;
+footer a {
+  display: block;
+  margin: 5px 0;
+  color: #2e5346;
+  text-decoration: underline;
+  transition: color 0.3s;
 }
