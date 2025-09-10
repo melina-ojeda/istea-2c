@@ -95,7 +95,7 @@ body{
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: beige;
+    background-color: grey;
     display: block;
     opacity: 0.6;
     transition: opacity ease 250ms;
@@ -176,22 +176,52 @@ main {
 }
 
 .btn-option:hover {
-    background-color: #e65c00;
+    background-color: #96c6b5;
     transform: translateY(-2px);
-}
-
-footer {
-        background-color: #96c6b5;
-        padding: 30px 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
 }
 
 .first-column,
 .second-column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-section {
+    display: grid;
+    background-color: #FFF7EE;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 70px;
+    gap: 50px;
+}
+
+.info-copy h3 {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.4px;
+    padding: 40px;
+    margin-left: 25px;
+}
+
+.info-copy h4 {
+    font-weight: 300;
+    font-size: 28px;
+    margin-left: 65px;
+}
+
+
+.info-img h4 {
+    font-weight: 300;
+    justify-self: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #96c6b5;
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 footer p {
