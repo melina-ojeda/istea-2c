@@ -85,36 +85,3 @@ footer a {
   text-decoration: underline;
   transition: color 0.3s;
 }
-
-
-aside {
-    width: 250px;
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.products-container {
-    display: grid;
-    gap: 20px;
-    padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    flex-grow: 1;
-}
-
-.product-item {
-    background-color: #2e5346;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.product-item p {
-    justify-content: center;
-}
-
-.product-item button {
-    cursor: pointer;
-}
