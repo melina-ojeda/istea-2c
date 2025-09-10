@@ -81,6 +81,7 @@ body{
     object-fit: cover;
 }
 
+
 .slider-nav {
     display: flex;
     column-gap: 1rem;
@@ -180,12 +181,6 @@ main {
     transform: translateY(-2px);
 }
 
-.first-column,
-.second-column {
-    display: flex;
-    flex-direction: column;
-}
-
 .info-section {
     display: grid;
     background-color: #FFF7EE;
@@ -208,7 +203,6 @@ main {
     margin-left: 65px;
 }
 
-
 .info-img h4 {
     font-weight: 300;
     justify-self: center;
@@ -224,6 +218,12 @@ footer {
     gap: 10px;
 }
 
+.first-column,
+.second-column {
+    display: flex;
+    flex-direction: column;
+}
+
 footer p {
   font-size: 22px;
   font-weight: 600;
@@ -236,3 +236,4 @@ footer a {
   text-decoration: underline;
   transition: color 0.3s;
 }
+
