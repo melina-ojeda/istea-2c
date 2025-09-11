@@ -109,12 +109,26 @@ main {
     background-color: #2e5346;
     border-radius: 5px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-item img {
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
 }
 
 .product-item p {
-    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #fff7ee;
 }
 
 .product-item button {
     cursor: pointer;
+    color: #96c6b5;
 }
