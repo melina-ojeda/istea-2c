@@ -17,7 +17,7 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 5px 10%;
+    padding: 0px 100px;
 }
 
 .header .logo{
@@ -25,6 +25,7 @@ body{
 }
 
 .header .logo img{
+    display: flex;
     height: 85px;
     width: auto;
     justify-content: center;
@@ -37,11 +38,9 @@ body{
 
 .header .nav-links{
     list-style: none;
-}
-
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+   
 }
 
 .header .nav-links li:hover{
@@ -49,7 +48,7 @@ body{
 }
 
 .header .nav-links a{
-    font-size: 700;
+    font-weight: 500;
     color: black;
     text-decoration: none;
 }
@@ -79,6 +78,8 @@ body{
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+    max-height:fit-content; /*para q no se vea gigante??*/
+
 }
 
 
@@ -237,3 +238,31 @@ footer a {
   transition: color 0.3s;
 }
 
+@media (max-width: 360px){
+    .main {
+        flex-direction: column;
+    }
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .header .nav-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+    .container-options {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+    
+}
