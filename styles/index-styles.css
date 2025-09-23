@@ -114,8 +114,9 @@ main {
     margin-bottom: 20px;
     border-radius: 20px;
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 .dog-picture img,
@@ -147,6 +148,24 @@ main {
 .btn-option:hover {
     background-color: #96c6b5;
     transform: translateY(-2px);
+}
+
+@media (max-width: 830px) {
+    .container-options{
+        flex-direction: column;
+        align-items: center;
+        column-gap: 0;
+        row-gap: 40px;
+    }
+
+    .option-cat h2, .option-dog h2{
+        font-size: 28px;
+    }
+
+    .btn-option{
+        padding: 12px 24px;
+        font-size: 28px;
+    }
 }
 
 .info-section {
