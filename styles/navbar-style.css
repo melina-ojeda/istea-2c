@@ -64,11 +64,14 @@
     display: none;
 }
 
-
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
 
 .menu-btn img{
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px; 
 }
 
 .close-menu{
@@ -80,18 +83,24 @@
         display: block;
     }
 
+    .open-menu {
+        display: block;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
     .nav-links{
         display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
-        right: 0;
+        left: 0;
         width: 100%; /*debería rellenar el fondo de todo el menu pero no lo hace?*/
-        max-width: 300px;
         align-items: center;
         text-align: center;
         margin: 0 auto;
-        border-radius: 10px;
         background-color: var(--menu-mobile-background);
         padding: 20px 0;
         z-index: 99; /*trae el menu hacia adelante, por la imagen no se veia*/
@@ -105,6 +114,7 @@
         display: block;
         width: 100%;
         text-align: center;
+        padding: 10px 0;
     }
 
     .menu-toggle:checked + .menu-btn .open-menu {

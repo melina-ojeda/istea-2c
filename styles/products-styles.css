@@ -1,61 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-*{
-    box-sizing: border-box;
+:root{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
+    --color-primario: #fcc1c4;
+    --color-secundario: #fff7ee;
+    --text-color: #000000;
+    --menu-mobile-background: #FFE2E2;
 }
 
 body{
-    background-color: #fcc1c4;
-}
-
-.header{
-    display: flex;
-    background-color: #fff7ee;
-    justify-content: space-between;
-    align-items: center;
-    height: 85px;
-    padding: 5px 10%;
-}
-
-.header .logo{
-    cursor: pointer;
-}
-
-.header .logo img{
-    height: 85px;
-    width: auto;
-    justify-content: center;
-    transition: all 0.3s;
-}
-
-.header .logo img:hover{
-    transform: scale(1.2);
-}
-
-.header .nav-links{
-    list-style: none;
-}
-
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.header .nav-links li:hover{
-    transform: scale(1.1);
-}
-
-.header .nav-links a{
-    font-size: 700;
-    color: black;
-    text-decoration: none;
-}
-
-.header .nav-links li a:hover{
-    color: black;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primario);
+    color: var(--text-color)
 }
 
 footer {

@@ -4,24 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bocaditos Chulos</title>
-  <link rel="stylesheet" href="/styles/product3-styles.css">
+  <link rel="stylesheet" href="/styles/product1-styles.css">
+  <link rel="stylesheet" href="/styles/navbar-style.css">
   <link rel="logo" href="/img/logopaletaactualizada.png">
 </head>
 
 <body>
 
   <header class="header" id="the-header">
-      <div class="logo">
-        <img src="/img/logo.png" alt="Logo del sitio" width="115px">
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="/index.html">Inicio</li>
-          <li><a href="/products.html">Productos</li>
-          <li><a href="/about-us.html">Sobre nosotros</li>
-          <li><a href="#">Preguntas frecuentes</li>
-        </ul>
-      </nav>
+    <nav class="navbar">
+      <a href="/index.html" class="logo">
+        <img src="/img/logo.png" height="50" width="50" alt="logo del sitio">
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+       <label for="menu-toggle" class="menu-btn">
+        <img src="/img/list.svg" alt="abrir menú" class="open-menu">
+        <img src="/img/x.svg" alt="cerrar menú" class="close-menu">
+       </label>
+
+      <ul class="nav-links">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/products.html">Productos</a></li>
+        <li><a href="/about-us.html">Sobre nosotros</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>  
+    </nav>
   </header>
 
   <main>
@@ -30,13 +38,13 @@
       <span class="divider">/</span>
       <a class="productos-breadcrum" href="/products.html">PRODUCTOS</a>
       <span class="divider">/</span>
-      <span class="active-breadcrum">TORTA BANDERINES<a>
+      <span class="active-breadcrum">TORTA PERSONALIZADA</a>
     </div>
-    <div class="img-tortabanderines">
-      <img src="/img/torta_banderines.png">
+    <div class="img-tortapersonalizada">
+      <img src="/img/torta_imagen.png">
     </div>
     <div class="price-container">
-      <h1>TORTA BANDERINES</h1>
+      <h1>TORTA PERSONALIZADA</h1>
       <p>$10.000</p>
       <button class="add-to-cart">agregar al carrito</button>
     </div>
