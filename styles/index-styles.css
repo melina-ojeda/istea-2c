@@ -24,16 +24,15 @@ a {
     color: var(--text-color)
 }
 
-.slider-wrapped{
+.slider-wrapped-desktop{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     max-width: 900px;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
 }
 
-.slider {
+.slider-desktop {
     display: flex;
     aspect-ratio: 16/9;
     overflow-x: hidden;
@@ -42,7 +41,7 @@ a {
     box-shadow: 0 .25rem .5rem #21212126;
 }
 
-.slider img {
+.slider-desktop img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
@@ -50,8 +49,7 @@ a {
 
 }
 
-
-.slider-nav {
+.slider-nav-desktop {
     display: flex;
     column-gap: 1rem;
     position: absolute;
@@ -61,7 +59,7 @@ a {
     z-index: 1;
 }
 
-.slider-nav a{
+.slider-nav-desktop a{
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -71,12 +69,84 @@ a {
     transition: opacity ease 250ms;
 }
 
-.slider-nav a:hover{
+.slider-nav-desktop a:hover{
     opacity: 1;
 }
 
-.slider::-webkit-scrollbar {
+.slider-desktop::-webkit-scrollbar {
     display: none;
+}
+
+/* estilos para el slider en mobile */
+.slider-wrapped-mobile{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 15px auto 0 auto;
+}
+
+.slider-mobile {
+    display: flex;
+    aspect-ratio: 4/3; /* formato cuadrado */
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .4rem #21212126;
+}
+
+.slider-mobile img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+}
+
+.slider-nav-mobile {
+    display: flex;
+    column-gap: 0.8rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav-mobile a{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    display: block;
+    opacity: 0.6;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav-mobile a:hover{
+    opacity: 1;
+}
+
+.slider-mobile::-webkit-scrollbar {
+    display: none;
+}
+
+/* hacemos por defecto que se muestre solo desktoip y desps media query cambiando los valores*/
+
+.slider-wrapped-desktop{
+    display: block;
+}
+
+.slider-wrapped-mobile{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapped-desktop{
+    display: none;
+}
+
+.slider-wrapped-mobile{
+    display: block;
+}
 }
 
 main {

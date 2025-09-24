@@ -3,7 +3,7 @@
     background-color: #fff7ee;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20%;
+    padding: 10px 10px;
 }
 
 .navbar{
@@ -23,7 +23,8 @@
 }
 
 .logo img{
-    width: auto;
+    height: 80px;
+    width: 80px;
     transition: all 0.3s;
 }
 
