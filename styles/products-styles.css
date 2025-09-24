@@ -19,35 +19,6 @@ body{
     color: var(--text-color)
 }
 
-footer {
-    background-color: #96c6b5;
-    padding: 30px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.first-column,
-.second-column {
-    display: flex;
-    flex-direction: column;
-}
-
-footer p {
-  font-size: 22px;
-  color: black;
-  font-weight: 600;
-}
-
-footer a {
-  display: block;
-  margin: 5px 0;
-  color: #2e5346;
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-
-
 aside {
     width: 250px;
 }
