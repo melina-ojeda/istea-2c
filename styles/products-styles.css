@@ -19,6 +19,7 @@ main {
     display: flex;
     flex-direction: row;
     padding: 20px;
+    gap:20px;
 }
 
 .products-container {
@@ -39,8 +40,9 @@ main {
 }
 
 .product-item img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
     margin-top: 10px;
     margin-bottom: 10px;
     
@@ -69,4 +71,24 @@ main {
 aside h1, h2 {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media (max-width:1270px) {
+    .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .product-item img{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 705px) {
+    .products-container {
+    grid-template-columns: 1fr;
+    }
+
+    .product-item img {
+    max-width: 150px;
+    }
 }
