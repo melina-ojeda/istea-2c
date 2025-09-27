@@ -97,9 +97,20 @@
 }
 
 @media (max-width: 950px){
+    .navbar {
+        display: grid; /*desktop flex y vistas chicas grid porque el logo no se me centraba y me pareció mejor ubicar el menú del lado izq como está en varias paginas*/
+        grid-template-columns: 1fr auto 1fr; /*tres columnas una para cada componente*/
+        align-items: center;
+    }
+    
+    .logo {
+        grid-column: 2;
+        align-items: center;
+    }
 
     .menu-btn{
-        display: block;
+        grid-column: 1;
+        align-items: start;
     }
 
     .open-menu {
@@ -112,7 +123,8 @@
 
     .nav-links{
         display: none;
-        flex-direction: column;
+        grid-column: 3;
+        align-items: end;
         position: absolute;
         top: 100%;
         left: 0;
