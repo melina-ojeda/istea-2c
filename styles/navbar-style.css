@@ -41,8 +41,11 @@
 }
 
 .nav-links li{
-    padding: 0 15px; 
+    display: flex;
     list-style: none;
+    padding: 0 20px; 
+    margin-right: 25px;
+    align-items: center;
 }
 
 .nav-links li:hover{
@@ -83,15 +86,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 50px;
 }
 
 .carrito{
     width: 22px;
     cursor: pointer;
-    padding: 10px 22px 0 ;
+    padding: 0;
+    height: 22px;
 }
 
-@media (max-width: 830px){
+@media (max-width: 950px){
+
     .menu-btn{
         display: block;
     }
