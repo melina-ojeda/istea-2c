@@ -112,21 +112,30 @@
       <h5>¡Contáctanos para mas información!</h5>
     </div>
     <form class="contact-form" method="post">
+      <div class="form-group"> <!--tengo q encerrar a todos en un div xq sino no puedo agregar aire entre los inputs con el label pegadito-->
       <label for="name" class="label-form">Nombre</label>
       <input type="text" id="name" class="inputs-form" placeholder="John">
-
+      </div>
+      
+      <div class="form-group">
       <label for="lastname" class="label-form">Apellido</label>
       <input type="text" id="lastname" class="inputs-form" placeholder="Doe">
+      </div>
 
+      <div class="form-group">
       <label for="email" class="label-form">Email</label>
       <input type="email" id="email" class="inputs-form" placeholder="johndoe@gmail.com">
+      </div>
 
+      <div class="form-group">
       <label for="phone" class="label-form">Teléfono</label>
       <input type="text" id="phone" class="inputs-form" placeholder="01123456789">
+      </div>
 
+      <div class="form-group">
       <label for="message" class="label-form">Mensaje</label>
       <textarea id="message" name="message" class="inputs-form" placeholder="Escribe aquí tu consulta..."></textarea>
-
+      </div>
       <input type="submit" class="btn-submit" value="Enviar">
     </form>
     

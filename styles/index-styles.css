@@ -254,10 +254,49 @@ main {
 }
 
 .contact-form{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+    display: flex; /*cambio de grid a flex*/
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto 30px;   
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-form{
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 5px;
+    border: 1px solid #555756;
+    box-sizing: border-box;
+}
+
+textarea.inputs-form{
+    min-height: 120px;
+    resize: vertical;
+}
+
+.label-form{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.btn-submit{
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px gray;
+    background-color: #2e5346;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #96c6b5;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1055px) {
