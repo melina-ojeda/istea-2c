@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
-    --color-primario: #fcc1c4;
+    --color-primario: #FAE2D4;
     --color-secundario: #fff7ee;
     --text-color: #000000;
     --menu-mobile-background: #FFE2E2;
@@ -24,15 +24,6 @@ body{
     flex-direction: column;
     margin-left: 100px;
     min-height: 900px;
-
-}
-
-.breadcrumb {
-    display: flex;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-left: 50px;
-
 }
 
 .detail-component{
