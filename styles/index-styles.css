@@ -237,9 +237,11 @@ main {
 
 .info-img img{
     margin-left: 30px;
+    width: 650px;
+    height: auto;
 }
 
-.info-img h4 {
+.info-img h5 {
     flex-basis: 100%;
     font-weight: 300;
     justify-self: center;
@@ -250,7 +252,8 @@ main {
 .text-form{
     display: flex;
     justify-content: center;
-    font-size: 28px;
+    font-size: 30px;
+    margin-bottom: 0;
 }
 
 .contact-form{
@@ -271,11 +274,12 @@ main {
     border-radius: 5px;
     border: 1px solid #555756;
     box-sizing: border-box;
+    max-width: 500px;
+    min-width: 350px;
 }
 
 textarea.inputs-form{
-    min-height: 120px;
-    resize: vertical;
+    min-height: 190px;
 }
 
 .label-form{
@@ -349,8 +353,22 @@ textarea.inputs-form{
         align-content: center;
     }
 
-    .info-copy img{
-        width: 40px;
+    .info-img img{
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .info-img img{
+        width: 300px;
+        height: auto;
+    }
+    .info-copy h3, .info-copy h4{
+        padding: 0px;
+        margin: 0px;
+        font-size: 18px;
+        align-content: center;
     }
 }
 
