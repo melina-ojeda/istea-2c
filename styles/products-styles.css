@@ -76,16 +76,40 @@ main {
     border-radius: 10px;
     font-size: 16px;
     box-sizing: border-box;
+    margin-top: 10px;
 }
 
 aside h1{
-    font-size: 24px;
-}
-
-aside h1, h2 {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 26px;
+    margin-left: 15px;
 }
+
+aside h2{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.cat-list{
+    list-style:circle;
+    padding-left: 25px;
+}
+
+.cat-list li{
+    margin: 5px ;
+}
+
+.cat-list a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.cat-list a:hover {
+    color: gray;
+}
+
 
 @media (max-width:1270px) {
     .products-container {
