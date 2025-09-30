@@ -23,14 +23,3 @@ main {
     min-height: 500px;
 }
 
-.copy-solution{
-    display: flex;
-    padding: 20px;
-    margin: 20px 20px;
-    
-}
-
-.copy-solution p{
-    font-size: 26px;
-    letter-spacing: 0.4px;
-}

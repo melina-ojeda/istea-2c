@@ -261,6 +261,8 @@ main {
     flex-direction: column;
     gap: 15px;
     margin: 0 auto 30px;   
+    width: 500px;
+    max-width: 100%;
 }
 
 .form-group{
@@ -279,7 +281,9 @@ main {
 }
 
 textarea.inputs-form{
-    min-height: 190px;
+    width: 100%;
+    max-width: none;
+    min-height: 120px;
 }
 
 .label-form{

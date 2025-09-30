@@ -2,8 +2,19 @@ footer {
     background-color: #96c6b5;
     padding: 30px 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+}
+
+.logo-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-footer img{
+    height: 200px;
+    width: 200px;
 }
 
 .first-column,
