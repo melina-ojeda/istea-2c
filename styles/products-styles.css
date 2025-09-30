@@ -21,6 +21,7 @@ body{
 
 aside {
     width: 250px;
+    margin-left: 90px;
 }
 
 main {
@@ -32,10 +33,11 @@ main {
 
 .products-container {
     display: grid;
-    gap: 20px;
+    gap: 70px;
     padding: 10px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     flex-grow: 1;
+    margin: 0 30px;
 }
 
 .product-item {
@@ -45,14 +47,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .product-item img {
-    width: 100%;
+    width: auto;
     height: auto;
-    max-height: 300px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    max-height: 180px;
+    margin: 5px 0;
     
 }
 
@@ -60,11 +62,19 @@ main {
     text-align: center;
     padding-bottom: 10px;
     color: #fff7ee;
+    font-size: 24px;
+}
+
+.product-item h2{
+    font-weight: 500;
+    color: white;
+    margin-top: 0;
+    font-size: 20px;
 }
 
 .product-item button {
     cursor: pointer;
-    color: #96c6b5;
+    color: #2e5346;
 }
 
 .search-products {
