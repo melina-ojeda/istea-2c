@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/styles/cart-style.css">
   <link rel="stylesheet" href="/styles/navbar-style.css">
   <link rel="stylesheet" href="/styles/footer-style.css">
+  <link rel="stylesheet" href="/styles/breadcrum-style.css">
 </head>
 
 <body>
@@ -38,9 +39,39 @@
     </nav>
   </header>
 
+  <div class="breadcrumb">
+      <a class="inicio-breadcrum" href="/index.html">INICIO</a>
+      <span class="divider">/</span>
+      <span class="active-breadcrum">CARRITO</span>
+    </div>
+
   <main>
-    <div class="faqs-title">
-        
+    <div class="">
+        <table class="shop-table" cellspacing="0">
+          <thead>
+            <tr>
+            <th scope="col" class="product-name">Producto</th>
+            <th scope="col" class="product-price">Precio</th>
+            <th scope="col" class="product-quantity">Cantidad</th>
+            <th scope="col" class="product-subtotal">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="item-cart">
+              <td scope="row" role="rowheader" class="product-name" data-title="Producto">
+                <div class="product-info">
+                <img src="/img/torta_imagen.png" alt="torta personalizada">
+                <a href="product-details.html">Torta personalizada</a>
+                </div>
+              </td>
+              <td class="product-price" data-title="Precio">$13.000,00</td>
+              <td class="product-quantity" data-title="Cantidad">
+                <input type="number" class="input-qty" value="1" min="1">
+              </td>
+              <td class="product-subtotal" data-title="Subtotal"></td>
+            </tr>
+          </tbody>
+        </table>
     </div>
   </main>
 
