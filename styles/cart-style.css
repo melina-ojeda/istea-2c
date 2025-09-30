@@ -10,7 +10,8 @@
     --color-secundario: #fff7ee;
     --text-color: #000000;
     --menu-mobile-background: #FFE2E2;
-    --verde-oscuro:#2e5346;
+    --verde:#2e5346;
+    --verde-oscuro: #07402d;
 }
 
 body{
@@ -22,15 +23,21 @@ body{
 
 main {
     min-height: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .shop-table{
-    width: 80%;
+    /*width: 80%;
     max-width: 800px;
     border-collapse: collapse;
     border-radius: 5px;
     text-align: left;
-    margin: 20px auto;
+    margin: 20px auto;*/
+    flex: 2;
 }
 
 .shop-table thead{
@@ -84,4 +91,101 @@ main {
     text-decoration: none;
     font-weight: 500;
     color: var(--verde-oscuro);
+}
+
+.shop-table td.actions{
+    text-align: right;
+    padding: 20px;
+}
+
+.shop-table .actions button{
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.shop-table .btn-shop {
+    background-color: var(--verde-oscuro);
+    color: #fff;
+}
+
+.shop-table .btn-shop:hover {
+    background-color: #07402d;
+    transform: translateY(-2px);
+}
+
+.shop-table .btn-empty {
+    background-color: var(--verde-oscuro);
+    color: #fff;
+}
+
+.shop-table .btn-empty:hover {
+    background-color: #07402d;
+    transform: translateY(-2px);
+}
+
+.shop-table td.actions {
+    border: none;
+}
+
+.total-cart{
+    flex: 1;
+    background-color: var(--color-secundario);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: var(--verde-oscuro);
+    max-width: 300px;
+}
+
+.total-cart h1{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.cart-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table td{
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cart-table th{
+    vertical-align: top;
+    text-align: start;
+    font-weight: 400;
+    padding: 14px 0 14px;
+}
+
+.terms{
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--verde-oscuro);
+}
+
+.terms-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.terms-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.terms__row a {
+    color: var(--verde-oscuro);
+    text-decoration: underline;
 }
