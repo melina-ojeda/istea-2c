@@ -1,5 +1,5 @@
 footer {
-    background-color: #96c6b5;
+    background-color: var(--color-secundario);
     padding: 30px 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

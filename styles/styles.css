@@ -9,6 +9,7 @@
     --color-secundario: #AF2F4E;
     --color-strong-green: #304B2C;
     --color-pastel-red: #DE909D;
+    overflow-x: hidden;
 }
 
 body{
@@ -17,14 +18,14 @@ body{
     background-color: white;
 }
 
-            /* NAVBAR */
+/*-------------------------- NAVBAR ----------------------------------*/
 
 .header {
     display: flex;
-    background-color: #fff7ee;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 5px;
 }
 
 .navbar{
@@ -51,6 +52,18 @@ body{
 
 .logo img:hover{
     transform: scale(1.2);
+}
+
+.nav-links, .cart-btn, .profile-btn{
+    display: flex;
+    align-items: center;
+}
+
+.right-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
 }
 
 .nav-links{
@@ -107,19 +120,40 @@ body{
 .cart-btn{
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 50px;
 }
 
 .carrito{
-    width: 24px;
+    width: 20px;
     cursor: pointer;
-    padding: 50px; /*alineado con el carrusel sino queda muy solo a la derecha*/
+    /*padding: 50px; alineado con el carrusel sino queda muy solo a la derecha*/
     height: 24px;
 }
 
 .carrito:hover{
     transform: scale(1.1);
+}
+
+.profile-btn{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.user-icon{
+    width: 42px;
+    cursor: pointer;
+    padding: 50px;
+}
+
+.user-icon{
+    transform: scale(1.1);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @media (max-width: 975px){
@@ -184,4 +218,76 @@ body{
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
+}
+
+/*------------------------- HERO ------------------------------------*/
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.50);
+    padding: 40px 60px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);;
+}
+
+.hero-text h1{
+    font-size: 36px;
+    color: var(--color-strong-green);
+}
+
+.hero-text p{
+    font-size: 22px;
+    color: var(--color-strong-green);
+    line-height: 1.5;
+    
+}
+
+.btn-hero{
+    background-color: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-hero:hover{
+    background-color: var(--color-secundario);
+}
+
+/*------------------ CONTENEDOR INFO ------------------------------*/
+.info-section{
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    width: 100%;
+    height: 25vh;
+    margin-top: -20px;
+    
 }
