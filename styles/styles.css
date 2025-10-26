@@ -9,6 +9,7 @@
     --color-secundario: #AF2F4E;
     --color-strong-green: #304B2C;
     --color-pastel-red: #DE909D;
+    --color-grey: #F7F8FA
     overflow-x: hidden;
 }
 
@@ -270,9 +271,10 @@ body{
     background-color: var(--color-primario);
     color: white;
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 10px 15px;
     border-radius: 8px;
     transition: 0.3s;
+    font-size: 16px;
 }
 
 .btn-hero:hover{
@@ -280,14 +282,59 @@ body{
 }
 
 /*------------------ CONTENEDOR INFO ------------------------------*/
+/*TO DO: agregar animaciones a cada item*/
+
 .info-section{
     background-color: var(--color-primario);
-    display: flex;
-    justify-content: space-around;
+    padding: 30px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
     align-items: center;
-    padding: 50px 20px;
-    width: 100%;
+    width: 1400px;
     height: 25vh;
     margin-top: -20px;
-    
 }
+
+.first-item, .second-item , .third-item{
+    justify-items: center;
+    color: white;
+}
+
+.first-item h2, .second-item h2, .third-item h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/*--------------------- COMPONENTE CONOCE MAS ------------------------*/
+/*TO DO: cambiar bullets por checks*/
+
+.see-more-component{
+    background-color: var(--color-grey);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    gap: 40px;
+    margin-left: 70px ;
+    margin-bottom: 15px;
+}
+
+.see-more-txt h1{
+    font-size: 38px;
+}
+
+.see-more-txt{
+    flex: 1.2;
+}
+.see-more-img{
+    flex: 1;
+}
+.see-more-img img{
+    width: 85%;
+    height: auto;
+    border-radius: 5px;
+}
+
