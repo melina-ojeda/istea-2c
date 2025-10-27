@@ -9,7 +9,7 @@
     --color-secundario: #AF2F4E;
     --color-strong-green: #304B2C;
     --color-pastel-red: #DE909D;
-    --color-grey: #F7F8FA
+    --color-grey: #F7F8FA;
     overflow-x: hidden;
 }
 
@@ -220,8 +220,47 @@ body{
         display: flex;
     }
 }
+/*---------------------------------- FOOTER ------------------------------------*/
 
-/*------------------------- HERO ------------------------------------*/
+footer {
+    background-color: var(--color-secundario);
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.logo-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-footer img{
+    height: 200px;
+    width: 200px;
+}
+
+.first-column,
+.second-column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+footer a {
+  display: block;
+  margin: 5px 0;
+  color: #2e5346;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+/*----------------------------------- HERO -------------------------------------*/
 
 .hero {
     width: 100%;
@@ -371,7 +410,10 @@ body{
     margin-bottom: 10px;
 }
 
-
+.product-item a {
+    text-decoration: none;
+    color: var(--color-strong-green);
+}
 
 @media (max-width: 1024px) {
   .products-container {
@@ -396,7 +438,6 @@ body{
 /*TO DO: cambiar bullets por checks*/
 
 .see-more-component{
-    background-color: var(--color-grey);
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -404,12 +445,18 @@ body{
     flex-direction: row;
     padding: 20px;
     gap: 40px;
-    margin-left: 70px ;
-    margin-bottom: 15px;
-}
+    margin: 70px auto;}
 
 .see-more-txt h1{
-    font-size: 38px;
+    font-size: 36px;
+}
+
+.see-more-txt ul {
+    list-style-type:circle;
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .see-more-txt{
@@ -425,7 +472,7 @@ body{
 }
 
 .see-more-btn{
-    margin-top: 35px;
+    margin-top: 42px;
 }
 
 .more-btn{
@@ -435,7 +482,7 @@ body{
     padding: 10px 15px;
     border-radius: 5px;
     transition: 0.3s;
-    font-size: 16px;
+    font-size: 18px;
     
 }
 
@@ -443,4 +490,73 @@ body{
     background-color: var(--color-secundario);
 }
 
+/*--------------------------------BREADCRUMBS-------------------------------*/
 
+.breadcrumb{
+    margin: 20px 100px;
+    font-size: 18px;
+}
+
+.inicio-breadcrum{
+    text-decoration: none;
+    color: var(--color-strong-green);
+    font-weight: 500;
+}
+
+.active-breadcrum{
+    color: var(--color-primario);
+    font-weight: 400;
+}
+
+.divider{
+    padding: 5px;
+}
+
+/*---------------------------------FILTROS------------------------------------*/
+
+.search-products {
+    position: relative;
+    padding: 6px;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #948e8e;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.filter-check {
+    font-size: 18px;
+}
+
+.slider-filter {
+    color: var(--color-secundario);
+}
+
+/*------------------------ GRILLA DE PRODUCTOS ----------------------------------*/
+
+.products-page{
+    display:flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.products-page aside{
+    width: 300px;
+    margin-left: 100px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    align-items: start;
+    max-width: 1000px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
