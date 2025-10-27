@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-widht, initial-scale=1.0">
   <title>Bocaditos Chulos</title>
   <link rel="icon" type="/img/logo.png" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/styles/cart-style.css">
-  <link rel="stylesheet" href="/styles/navbar-style.css">
-  <link rel="stylesheet" href="/styles/footer-style.css">
-  <link rel="stylesheet" href="/styles/breadcrum-style.css">
+  <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
@@ -23,93 +20,82 @@
        </label>
        
       <a href="/index.html" class="logo">
-        <img src="/img/logo.png" alt="logo del sitio">
+        <img src="/img/logo png .png" alt="logo del sitio">
       </a>
 
+      <div class="right-section">
       <ul class="nav-links">
-        <li><a href="/index.html">Inicio</a></li>
         <li><a href="/products.html">Productos</a></li>
-        <li><a href="/about-us.html">Sobre nosotros</a></li>
-        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="/about-us.html">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
       </ul>
+      </div>
 
+      <div class="icons">
+      <a href="#" class="profile-btn">
+        <img src="/img/usericon.svg.svg" alt="icono de usuario" class="user-icon">
+      </a>
       <a href="/cart.html" class="cart-btn">
         <img src="/img/cart3.svg" alt="carrito" class="carrito">
       </a>
+      </div>
     </nav>
   </header>
 
-  <div class="breadcrumb">
-      <a class="inicio-breadcrum" href="/index.html">INICIO</a>
-      <span class="divider">/</span>
-      <span class="active-breadcrum">CARRITO</span>
+  <div class="my-cart">
+    <h1>Mi carrito</h1>
+    <a href="/products.html" class="continue-shopping">Sigue comprando</a>
     </div>
 
-  <main>
-    <div class="">
-        <table class="shop-table" cellspacing="0">
+  <main class="cart-container">
+    <section class="cart-items">
+        <table class="cart-table" cellspacing="0">
           <thead>
             <tr>
             <th scope="col" class="product-name">Producto</th>
             <th scope="col" class="product-price">Precio</th>
             <th scope="col" class="product-quantity">Cantidad</th>
-            <th scope="col" class="product-subtotal">Subtotal</th>
+            <th scope="col" class="product-subtotal">Total</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="item-cart">
+            <tr class="cart-item">
               <td scope="row" role="rowheader" class="product-name" data-title="Producto">
                 <div class="product-info">
-                <img src="/img/torta_imagen.png" alt="torta personalizada">
-                <a href="product-details.html">Torta personalizada</a>
+                <img src="/img/item-gomitas.jpg" alt="gomitas de colágeno para perros y gatos">
+                <div class="product-details">
+                <a href="product-details.html">Gomitas de colágeno</a>
+                <button class="btn-empty">Eliminar</button>  
+                </div>
                 </div>
               </td>
-              <td class="product-price" data-title="Precio">$13.000,00</td>
+              <td class="product-price" data-title="Precio">$5.000,00</td>
               <td class="product-quantity" data-title="Cantidad">
-                <input type="number" class="input-qty" value="1" min="1">
+                <div class="quantity-control">
+                <button class="minus">-</button>
+                <span>2</span>
+                <button class="plus">+</button>
+                </div>
               </td>
-              <td class="product-subtotal" data-title="Subtotal"></td>
-            </tr>
-            <tr>
-              <td colspan="6" class="actions">
-                <button type="submit" class="btn-shop">Continuar comprando</button>
-                <button type="submit" class="btn-empty">Vaciar carrito</button>
-              </td>
+              <td class="product-subtotal" data-title="Subtotal">$5.000,00</td>
             </tr>
           </tbody>
         </table>
-    </div>
+        <div class="cart-summary">
+          <p><b>Subtotal <span>$14.000</span></b></p>
+          <p class="shipping-note">El costo de envío se calculará más adelante</p>
+          <button class="checkout-btn">Iniciar compra</button>
+        </div>
+    </section>
 
-    <aside class="total-cart">
-        <h1>RESUMEN</h1>
-          <table cellspacing="0" class="cart-table">
-            <tbody>
-              <tr class="cart-subtotal">
-                <th>Subtotal</th>
-              </tr>
-              <tr class="cart-envio">
-                <th>Envío</th>
-              </tr>
-              <tr class="cart-total">
-                <th>Total</th>
-              </tr>
-            </tbody>
-          </table>  
-
-          <div class="terms">
-              <label class="terms-row">
-                <input id="checkTermsAndConditions" type="checkbox" checked>
-                <span>Declaro que he leído y acepto los <a href="#">Términos y condiciones</a></span>
-              </label>
-            </div>
-  </aside>
+    
   </main>
 
   
 
   <footer>  
     <div class="logo-footer">
-      <img src="/img/logo.png" alt="logo del sitio">
+      <img src="/img/logo png .png" alt="logo del sitio">
     </div>
     <div class="first-column">
       <p>Explorar</p>
