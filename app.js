@@ -5,12 +5,12 @@ const listProducts = [
     {name: "Snacks para gatos", price: 2000, img: "img/item-snacksgatos.jpg", imgAlt: "snacks para perros"},
 ];
 
-// ---------------------- DOM ELEMENTS ----------------------//
+// DOM ELEMENTS
 
 const productsDomElements = document.querySelector('.products-grid');
 const inputSearch = document.querySelector('.search-products');
 
-// ---------------------- FUNCIONES ----------------------//
+// FUNCIONES 
 function createProduct(product) {
 
 // creo los elementos
@@ -41,8 +41,8 @@ return newProduct;
 }
 
 function filterProducts(text){
-    const filtered = listProducts.filter( product => product.name.toLowerCase().includes(text.toLowerCase()));
-    return productsFitered;
+    const productsFiltered = listProducts.filter( product => product.name.toLowerCase().includes(text.toLowerCase()));
+    return productsFiltered;
 }
 
 function renderProducts(products){
@@ -51,20 +51,27 @@ function renderProducts(products){
         const newProduct = createProduct(product);
         productsDomElements.appendChild(newProduct);
     });
-} // agregar productos
+}
 
-// ---------------------- EVENTOS ----------------------//
+function filterProductsByCategory(category){
+    const checkedBox = document.querySelector(`input[value="${category}"]`);
+    if(checkedBox.lenght === 0) {
+        return listProducts;
+    }
+    const selectedCategory = checkedBox.value;
+}
+
+// EVENTOS
 
 inputSearch.addEventListener('keyup', (event) => {
     const text = event.target.value;
-    const productsFitered = filterProducts(text);
-    renderProducts(productsFitered);
+    const productsFiltered = filterProducts(text);
+    renderProducts(productsFiltered);
 });
 
-listProducts.forEach( product => {
-    const newProduct = createProduct(product);
-    productsDomElements.appendChild(newProduct);
-});
+// Inicialización
+
+renderProducts(listProducts);
 
 
 
