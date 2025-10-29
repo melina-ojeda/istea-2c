@@ -5,8 +5,12 @@ const listProducts = [
     {name: "Snacks para gatos", price: 2000, img: "img/item-snacksgatos.jpg", imgAlt: "snacks para perros"},
 ];
 
-const productsDomElements = document.querySelector('.products-grid');
+// ---------------------- DOM ELEMENTS ----------------------//
 
+const productsDomElements = document.querySelector('.products-grid');
+const inputSearch = document.querySelector('.search-products');
+
+// ---------------------- FUNCIONES ----------------------//
 function createProduct(product) {
 
 // creo los elementos
@@ -36,9 +40,31 @@ return newProduct;
 
 }
 
+function filterProducts(text){
+    const filtered = listProducts.filter( product => product.name.toLowerCase().includes(text.toLowerCase()));
+    return productsFitered;
+}
+
+function renderProducts(products){
+    productsDomElements.innerHTML = '';
+    products.forEach( product => {
+        const newProduct = createProduct(product);
+        productsDomElements.appendChild(newProduct);
+    });
+} // agregar productos
+
+// ---------------------- EVENTOS ----------------------//
+
+inputSearch.addEventListener('keyup', (event) => {
+    const text = event.target.value;
+    const productsFitered = filterProducts(text);
+    renderProducts(productsFitered);
+});
+
 listProducts.forEach( product => {
     const newProduct = createProduct(product);
     productsDomElements.appendChild(newProduct);
 });
+
 
 
