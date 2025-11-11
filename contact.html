@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+  <title>Bocaditos Chulos</title>
+  <link rel="icon" type="/img/logo.png" href="/images/favicon.ico">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <header class="header" id="the-header">
+    <nav class="navbar">
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+       <label for="menu-toggle" class="menu-btn">
+        <img src="img/list.svg" alt="abrir menú" class="open-menu">
+        <img src="img/x.svg" alt="cerrar menú" class="close-menu">
+       </label>
+       
+      <a href="/index.html" class="logo">
+        <img src="img/logo.png" alt="logo del sitio">
+      </a>
+
+      <div class="right-section">
+      <ul class="nav-links">
+        <li><a href="/products.html">Productos</a></li>
+        <li><a href="/about-us.html">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      </div>
+
+      <div class="icons">
+      <a href="#" class="profile-btn">
+        <img src="img/usericon.svg" alt="icono de usuario" class="user-icon">
+      </a>
+      <a href="/cart.html" class="cart-btn">
+        <img src="img/cart3.svg" alt="carrito" class="carrito">
+      </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Contacto</h1>
+                <p>¡Contáctanos para más información!</p>
+            </div>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="tu.mail@gmail.com" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="1122334455" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje <span class="required">*</span></label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ingrese su consulta" class="form-input"></textarea>
+                </div>
+                <div class="form-button-container">
+                    <button type="submit" class="submit-button">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+   <footer>  
+    <div class="logo-footer">
+      <img src="img/logo.png" alt="logo del sitio">
+    </div>
+    <div class="first-column">
+      <p>Explorar</p>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Productos</a>
+      <a href="#">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <div class="second-column">
+      <p>Contacto</p>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+</footer>
+</body>
+</html>

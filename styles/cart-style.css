@@ -189,3 +189,23 @@ main {
     color: var(--verde-oscuro);
     text-decoration: underline;
 }
+
+.checkout-btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--verde-oscuro);
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}   
+
+.checkout-btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*------------------------------------- CART AUTHENTICATION ----------------------------------------------*/
