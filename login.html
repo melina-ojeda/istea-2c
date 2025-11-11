@@ -27,12 +27,12 @@
       <ul class="nav-links">
         <li><a href="/products.html">Productos</a></li>
         <li><a href="/about-us.html">Nosotros</a></li>
-        <li><a href="/contact.html">Contacto</a></li>
+        <li><a href="#">Contacto</a></li>
       </ul>
       </div>
 
       <div class="icons">
-      <a href="/login.html" class="profile-btn">
+      <a href="#" class="profile-btn">
         <img src="img/usericon.svg" alt="icono de usuario" class="user-icon">
       </a>
       <a href="/cart.html" class="cart-btn">
@@ -45,36 +45,24 @@
   <main class="contact-section">
         <div class="contact-container">
             <div class="contact-header">
-                <h1>Contacto</h1>
-                <p>¡Contáctanos para más información!</p>
-            </div>
+                <h1>Mi cuenta</h1>
+                <p>Inicia sesión</p>
             <form action="#" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="nombre">Nombre <span class="required">*</span></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="form-input" required>
+                <div class="form-group">
+                        <label for="email">Email</span></label>
+                        <input type="email" id="email" name="email" placeholder="tu.mail@gmail.com" class="form-input" required>
                     </div>
                     <div class="form-group">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" class="form-input">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="text" id="contraseña" name="contraseña" placeholder="******" class="form-input">
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="tu.mail@gmail.com" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="1122334455" class="form-input">
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje <span class="required">*</span></label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ingrese su consulta" class="form-input"></textarea>
                 </div>
                 <div class="form-button-container">
-                    <button type="submit" class="submit-button">Enviar</button>
+                    <button type="submit" class="submit-button">Iniciar sesión</button>
                 </div>
             </form>
+            <div class="register-link">
+                <p>¿No tienes una cuenta? <a href="/register.html">Regístrate aquí</a></p>
         </div>
     </main>
 

@@ -905,3 +905,20 @@ form {
     .form-row {
         grid-template-columns: 1fr;
     }}
+
+/*------------------------------------------ LOGIN -----------------------------------------*/
+
+.register-link{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p{
+    font-size: 16px;
+    color: var(--color-strong-green);
+}
+
+.register-link a{
+    color: var(--color-secundario);
+    text-decoration: underline;
+}
