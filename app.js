@@ -76,6 +76,31 @@ function createProduct(product) {
 
 }
 
+async function getProductsFromAirtable() {
+    try {
+        const response = await fetch(airtableUrl, {
+            headers: {
+                'Authorization': `Bearer ${airtableToken}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await response.json();
+        console.log('products from Airtable:', data);
+        const mappedProducts = data.records.map(item => ({
+            name: item.fields.name,
+            price: item.fields.price,
+            img: product.image,
+            imgAlt: item.fields.imageAlt,
+            category: item.fields.category
+        }));
+    } 
+    catch (error) {
+        console.error('Error fetching products from Airtable:', error);
+    } 
+}
+
+getProductsFromAirtable();
+
 // ------------------ EVENTOS ------------------ //
 
 inputSearch.addEventListener('keyup', (event) => {
