@@ -89,7 +89,7 @@ async function getProductsFromAirtable() {
         const mappedProducts = data.records.map(item => ({
             name: item.fields.name,
             price: item.fields.price,
-            img: product.img,
+            img: item.fields.img,
             imgAlt: item.fields.imgAlt,
             category: item.fields.category
         }));
