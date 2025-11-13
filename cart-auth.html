@@ -55,5 +55,105 @@
       <span class="pago">Pago</a>
     </div>
     
+    <div class="form-section">
+      <div class="section-header">
+        <h2>Contacto</h2>
+        <span>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></span>
+      </div>
+        <div class="form-group">
+          <label for="email">Email o número de teléfono</label>
+            <input type="email" id="email" name="email">
+        </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="offers" name="offers">
+              <label for="offers">Quiero recibir ofertas y novedades por email</label>
+          </div>
+    </div>
+    <div class="checkout-container">
+      <section class="checkout-form">
+        <form action="#" method="post">
+    <div class="form-section">
+      <h2>Datos de envío</h2>
+        <div class="form-row">        
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name">
+            </div>
+              <div class="form-group">
+                <label for="lastname">Apellido</label>
+                <input type="text" id="lastname" name="lastname">
+              </div>
+            </div>
+              <div class="form-group">
+                <label for="address">Dirección</label>
+                <input type="text" id="address" name="address">
+              </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city">Ciudad</label>
+                    <input type="text" id="city" name="city">
+                 </div>
+                    <div class="form-group">
+                        <label for="zipcode">Código postal</label>
+                        <input type="text" id="zipcode" name="zipcode">
+                    </div>
+                    <div class="form-group">
+                        <label for="province">Provincia</label>
+                        <select id="province" name="province">
+                            <option value="">Provincia</option>
+                            <option value="bsas">Buenos Aires</option>
+                            <option value="caba">CABA</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="save-info" name="save-info">
+                    <label for="save-info">Guardar esta información para futuras compras</label>
+                </div>
+            </div>
+
+            <div class="form-navigation">
+                <button type="submit" class="btn btn-primary">Siguiente</button>
+                <a href="cart.html" class="back-link">Volver al carrito</a>
+            </div>
+        </form>
+      </div>
+    </section>
+
+    <aside class="order-summary">
+        <div class="summary-product-list">
+            <div class="summary-product">
+                <div class="product-image">
+                    <img src="img/item-gomitas.jpg" alt="Gomitas de colágeno">
+                    <span class="product-quantity">2</span>
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Gomitas de colágeno</p>
+                </div>
+                <span class="product-price">$ 14.000</span>
+            </div>
+            </div>
+
+        <div class="coupon-section">
+            <input type="text" placeholder="Ingresa el cupón">
+            <button type="button" class="btn btn-secondary">Aplicar</button>
+        </div>
+
+        <div class="cost-breakdown">
+            <div class="cost-line">
+                <p>Subtotal</p>
+                <span>$ 14.000</span>
+            </div>
+            <div class="cost-line">
+                <p>Envío</p>
+                <span>Calcula en el siguiente paso</span>
+            </div>
+            <div class="cost-line total">
+                <p>Total</p>
+                <span>$ 14.000</span>
+            </div>
+        </div>
+    </aside>
+
   </main>
   

@@ -1,7 +1,11 @@
-import { AIRTABLE_TOKEN, BASE_ID, TABLE_NAME } from './env.js';
+//import { AIRTABLE_TOKEN, BASE_ID, TABLE_NAME } from './env.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const airtableToken = "patEMLyHsUiJ6GlGP.9ca1231702977e26c8c770b44e34250e834adaa4977d3d5d043af524da71d6cc";
+  const baseId = "appOdWK5dFP6gQQh9";
+  const tableName = "tblQjRt2noWsTKvzS";
+  const airtableUrl = `https://api.airtable.com/v0/${baseId}/${tableName}`;
 
   function getCodeProductFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -12,6 +16,47 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Product code from URL:', productCode);
 
   async function getProductDetail(code) {
-    // aca llamara a airtable para obtener el detalle del producto
+    const urlProduct = `${airtableUrl}/${code}`;
+    try {
+        const response = await fetch(urlProduct, {
+            headers: {
+                'Authorization': `Bearer ${airtableToken}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await response.json();
+        const product = {
+          img: data.fields.img ? data.fields.img[0].url : 'img/placeholder.png',
+          imgAlt: data.fields.imgAlt || data.fields.name,
+          description: data.fields.description,
+          details: data.fields.details,
+          name: data.fields.name,
+          price: data.fields.price,
+          id: data.id
+        };
+        console.log('Product detail from Airtable:', product);
+
+        document.querySelector('.active-breadcrum').textContent = product.name;
+        document.querySelector('.price-container h1').textContent = product.name;
+        document.querySelector('.price-container h2').textContent = "$"+product.price;
+        document.querySelector('.img-container img').src = product.img;
+        document.querySelector('.img-container img').alt = product.imgAlt;
+        document.querySelector('.product-description').textContent = product.description;
+        document.querySelector('.details-list').innerText = product.details;
+
+    } 
+    catch (error) {
+        console.error('Error fetching products from Airtable:', error);
+    } 
   }
+  getProductDetail(productCode);
+});
+
+const addToCart = document.querySelector('.add-to-cart-btn');
+addToCart.addEventListener('click', () => {
+  const quantityInput = document.querySelector('.quantity');
+  const quantity = parseInt(quantityInput.value, 10);
+  console.log('Cantidad añadida al carrito:', quantity);
+  localStorage.setItem('cartQuantity', quantity);
+  window.location.href = 'cart.html';
 });

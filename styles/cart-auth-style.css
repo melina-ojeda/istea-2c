@@ -21,10 +21,17 @@ body{
 }
 
 main {
-    min-height: 500px;
     display: flex;
-    justify-content: center;
     gap: 30px;
     align-items: flex-start;
     padding: 20px;
+}
+
+.checkout-container {
+    display: grid;
+    /* Dos columnas: la primera (formulario) es 1.5 veces más ancha que la segunda */
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
 }

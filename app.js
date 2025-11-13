@@ -11,33 +11,23 @@ const baseId = "appOdWK5dFP6gQQh9";
 const tableName = "tblQjRt2noWsTKvzS";
 const airtableUrl = `https://api.airtable.com/v0/${baseId}/${tableName}`;
 let listProducts = [];
+let filter = {text: '', category: []};
 
 
 //------------------ FUNCIONES ---------------------//
 
-
-/*
-function filterProducts(text){
-    const productsFiltered = listProducts.filter (product => product.name.toLowerCase().includes(text.toLowerCase()));
-    return productsFiltered;
-}
-
-function filterProductsByCategory(category){
-    const checkedBox = document.querySelector(`input[value="${category}"]`);
-    if(checkedBox.lenght === 0) {
-        return listProducts;
-    }
-    const selectedCategory = checkedBox.value;
-} */ 
-
 // filtros combinados
 
 function filtersCombined() {
-    const productsFiltered = listProducts.filter(product => {
-        product.name.toLowerCase().includes(filter.text.toLowerCase()) &&
-        product.category.toLowerCase().includes(filter.category.toLowerCase());
+    return listProducts.filter(product => {
+        const matchName = product.name.toLowerCase().includes(filter.text.toLowerCase());
+        
+        if (filter.category.length === 0) {
+            return matchName;
+        } else {
+        return matchName && filter.category.includes(product.category.toLowerCase());
+        }
     });
-    return productsFiltered;
 }
 
 // inicializar productos
@@ -56,8 +46,7 @@ function createProduct(product) {
     newProduct.setAttribute("class", "product-item");
 
     const newAnchor = document.createElement('a');
-    newAnchor.href = "/product-details.html";
-    //?code=${encodeURIComponent(product.id)}`; 
+    newAnchor.href = `product-details.html?code=${product.id}`; 
 
     const newImage = document.createElement('img');
     newImage.setAttribute("src", product.img);
@@ -86,13 +75,19 @@ async function getProductsFromAirtable() {
         });
         const data = await response.json();
         console.log('products from Airtable:', data);
-        const mappedProducts = data.records.map(item => ({
+        const mappedProducts = data.records.map(item => {
+            const imageUrl = item.fields.img ? item.fields.img[0].url : 'img/placeholder.png';
+            return{
             name: item.fields.name,
             price: item.fields.price,
-            img: item.fields.img,
+            img: imageUrl,
             imgAlt: item.fields.imgAlt,
-            category: item.fields.category
-        }));
+            category: item.fields.category,
+            id: item.id
+        }});
+
+        listProducts = mappedProducts; 
+        renderProducts(listProducts); 
     } 
     catch (error) {
         console.error('Error fetching products from Airtable:', error);
@@ -104,18 +99,21 @@ getProductsFromAirtable();
 // ------------------ EVENTOS ------------------ //
 
 inputSearch.addEventListener('keyup', (event) => {
-    const text = event.target.value;
-    const productsFiltered = filtersCombined({text: text, category: filter.category});
+    filter.text = event.target.value;
+    const productsFiltered = filtersCombined();
     renderProducts(productsFiltered);
 });
 
 categoryChecks.forEach(checkbox => {
     checkbox.addEventListener('change', () => {
-    renderProducts(productsFiltered);
+        filter.category = [];
+        categoryChecks.forEach(check => {
+            if (check.checked) {
+                filter.category.push(check.value.toLowerCase());
+            }
+        });
+        const productsFiltered = filtersCombined();
+        renderProducts(productsFiltered);
     });
 });
-
-
-
-
 });

@@ -491,34 +491,6 @@ footer a {
     background-color: var(--color-secundario);
 }
 
-/*--------------------------------BREADCRUMBS-------------------------------*/
-
-.breadcrumb{
-    margin: 20px 100px;
-    font-size: 18px;
-}
-
-.inicio-breadcrum{
-    text-decoration: none;
-    color: var(--color-strong-green);
-    font-weight: 500;
-}
-
-.productos-breadcrum{
-    text-decoration: none;
-    color: var(--color-strong-green);
-    font-weight: 500;
-}
-
-.active-breadcrum{
-    color: var(--color-primario);
-    font-weight: 400;
-}
-
-.divider{
-    padding: 5px;
-}
-
 /*---------------------------------FILTROS------------------------------------*/
 
 .search-products {
@@ -658,9 +630,7 @@ footer a {
     border-radius: 5px;
 }
 
-.details-list li{
-    margin-bottom: 10px;
-}
+
 
 /*----------------------------LANDING NOSOTROS--------------------------------*/
 
