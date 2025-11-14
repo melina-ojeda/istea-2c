@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
           id: data.id
         };
         console.log('Product detail from Airtable:', product);
-
         document.querySelector('.active-breadcrum').textContent = product.name;
         document.querySelector('.price-container h1').textContent = product.name;
         document.querySelector('.price-container h2').textContent = "$"+product.price;
@@ -44,19 +43,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.product-description').textContent = product.description;
         document.querySelector('.details-list').innerText = product.details;
 
+        const addToCart = document.querySelector('.add-to-cart-btn');
+        addToCart.addEventListener('click', () => {
+          const quantityInput = document.querySelector('.quantity');
+          const quantity = parseInt(quantityInput.value, 10);
+          const cartItem = {
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              img: product.img,
+              quantity: quantity
+            };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        //window.location.href = 'cart.html';
+        });
     } 
     catch (error) {
         console.error('Error fetching products from Airtable:', error);
     } 
   }
   getProductDetail(productCode);
-});
-
-const addToCart = document.querySelector('.add-to-cart-btn');
-addToCart.addEventListener('click', () => {
-  const quantityInput = document.querySelector('.quantity');
-  const quantity = parseInt(quantityInput.value, 10);
-  console.log('Cantidad añadida al carrito:', quantity);
-  localStorage.setItem('cartQuantity', quantity);
-  window.location.href = 'cart.html';
 });
