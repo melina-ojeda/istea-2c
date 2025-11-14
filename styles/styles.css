@@ -907,3 +907,161 @@ form {
     color: var(--color-secundario);
     text-decoration: underline;
 }
+
+/*----------------------------------------------- CART AUTH --------------------------------------*/
+
+.page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.contact-column {
+    padding: 20px;
+}
+
+.contact-header a{
+    color: var(--color-secundario);
+}
+
+.shipping-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: white;
+    align-items: flex-start;
+    order: 1;
+}
+
+.summary-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-grey);
+    order: 2;
+}
+
+/* ----------------------------- */
+/* HALF INPUTS (Nombre, Apellido) */
+/* ----------------------------- */
+.form-group-half {
+    flex: 1 1 48%; /* 🔧 antes se sobrescribía; ahora sí es mitad */
+    min-width: 0;
+}
+
+.form-group-half label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group-half input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group-half input:focus {
+    outline: none;
+    border-color: #7EAD64;
+    box-shadow: 0 0 0 3px rgba(126, 173, 100, 0.4);
+}
+
+/* ----------------------------- */
+/* SMALL INPUTS (Ciudad, CP...)  */
+/* ----------------------------- */
+.form-group-small {
+    flex: 1 1 28%; /* 🔧 ahora realmente son más chicos */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group-small label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group-small input,
+.form-group-small select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group-small input:focus,
+.form-group-small select:focus {
+    outline: none;
+    border-color: #7EAD64;
+    box-shadow: 0 0 0 3px rgba(126, 173, 100, 0.4);
+}
+
+/* ----------------------------- */
+/* FILAS DE INPUTS               */
+/* ----------------------------- */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* 🔧 ESTA ERA LA LÍNEA DEL PROBLEMA Y SE ELIMINA
+.form-group-half,
+.form-group-small {
+    flex: 1;
+}
+*/
+
+/* ----------------------------- */
+.form-input,
+.form-control,
+select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.form-actions {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.summary-section {
+    background-color: #efefef;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.summary-row.total strong {
+    font-size: 18px;
+}
+
+.summary-section hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}

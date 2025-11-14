@@ -6,154 +6,162 @@
   <title>Bocaditos Chulos</title>
   <link rel="icon" type="/img/logo.png" href="/images/favicon.ico">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/cart-auth-style.css">
   <link rel="stylesheet" href="styles/breadcrum-style.css">
 </head>
 
 <body>
 
-  <header class="header" id="the-header">
-    <nav class="navbar">
+<header class="header" id="the-header">
+  <nav class="navbar">
 
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-       <label for="menu-toggle" class="menu-btn">
-        <img src="img/list.svg" alt="abrir menú" class="open-menu">
-        <img src="img/x.svg" alt="cerrar menú" class="close-menu">
-       </label>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+      <img src="img/list.svg" alt="abrir menú" class="open-menu">
+      <img src="img/x.svg" alt="cerrar menú" class="close-menu">
+    </label>
        
-      <a href="index.html" class="logo">
-        <img src="img/logo.png" alt="logo del sitio">
-      </a>
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="logo del sitio">
+    </a>
 
-      <div class="right-section">
+    <div class="right-section">
       <ul class="nav-links">
         <li><a href="products.html">Productos</a></li>
         <li><a href="about-us.html">Nosotros</a></li>
         <li><a href="contact.html">Contacto</a></li>
       </ul>
-      </div>
+    </div>
 
-      <div class="icons">
+    <div class="icons">
       <a href="login.html" class="profile-btn">
         <img src="img/usericon.svg" alt="icono de usuario" class="user-icon">
       </a>
       <a href="cart.html" class="cart-btn">
         <img src="img/cart3.svg" alt="carrito" class="carrito">
       </a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="breadcrumb">
-      <a class="carrito" href="cart.html">Carrito</a>
-      <span class="divider">></span>
-      <a class="active-breadcrum" href="cart-auth.html">Detalle</a>
-      <span class="divider">></span>
-      <span class="envio" >Envío</a>
-      <span class="divider">></span>
-      <span class="pago">Pago</a>
     </div>
-    
-    <div class="form-section">
-      <div class="section-header">
-        <h2>Contacto</h2>
-        <span>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></span>
-      </div>
+
+  </nav>
+</header>
+
+
+<main>
+  <div class="breadcrumb">
+    <a class="carrito" href="cart.html">Carrito</a>
+    <span class="divider">></span>
+    <a class="active-breadcrum" href="cart-auth.html">Detalle</a>
+    <span class="divider">></span>
+    <span class="envio">Envío</span>
+    <span class="divider">></span>
+    <span class="pago">Pago</span>
+  </div>
+
+  <form action="#" method="POST" class="form-wrapper">
+
+  <div class="page-grid">
+
+    <!-- 🔹 COLUMNA IZQUIERDA COMPLETA -->
+    <div class="left-column">
+
+      <section class="contact-column">
+        <div class="contact-header">
+          <h2>Contacto</h2>
+          <span>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></span>
+        </div>
+
         <div class="form-group">
-          <label for="email">Email o número de teléfono</label>
-            <input type="email" id="email" name="email">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="tu.mail@gmail.com" class="form-input" required>
         </div>
-          <div class="form-group checkbox">
-            <input type="checkbox" id="offers" name="offers">
-              <label for="offers">Quiero recibir ofertas y novedades por email</label>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+          <label for="newsletter">Quiero recibir ofertas y novedades por email</label>
+        </div>
+      </section>
+
+      <section class="shipping-column">
+        <h2>Datos de envío</h2>
+
+        <div class="form-row">
+          <div class="form-group-half">
+            <label for="first-name">Nombre <span class="required">*</span></label>
+            <input type="text" id="first-name" name="first-name" class="form-control" required>
           </div>
-    </div>
-    <div class="checkout-container">
-      <section class="checkout-form">
-        <form action="#" method="post">
-    <div class="form-section">
-      <h2>Datos de envío</h2>
-        <div class="form-row">        
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name">
-            </div>
-              <div class="form-group">
-                <label for="lastname">Apellido</label>
-                <input type="text" id="lastname" name="lastname">
-              </div>
-            </div>
-              <div class="form-group">
-                <label for="address">Dirección</label>
-                <input type="text" id="address" name="address">
-              </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="city">Ciudad</label>
-                    <input type="text" id="city" name="city">
-                 </div>
-                    <div class="form-group">
-                        <label for="zipcode">Código postal</label>
-                        <input type="text" id="zipcode" name="zipcode">
-                    </div>
-                    <div class="form-group">
-                        <label for="province">Provincia</label>
-                        <select id="province" name="province">
-                            <option value="">Provincia</option>
-                            <option value="bsas">Buenos Aires</option>
-                            <option value="caba">CABA</option>
-                            </select>
-                    </div>
-                </div>
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="save-info" name="save-info">
-                    <label for="save-info">Guardar esta información para futuras compras</label>
-                </div>
-            </div>
 
-            <div class="form-navigation">
-                <button type="submit" class="btn btn-primary">Siguiente</button>
-                <a href="cart.html" class="back-link">Volver al carrito</a>
-            </div>
-        </form>
+          <div class="form-group-half">
+            <label for="last-name">Apellido <span class="required">*</span></label>
+            <input type="text" id="last-name" name="last-name" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Dirección <span class="required">*</span></label>
+          <input type="text" id="address" name="address" class="form-input" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group-small">
+            <label for="city">Ciudad <span class="required">*</span></label>
+            <input type="text" id="city" name="city" class="form-control" required>
+          </div>
+
+          <div class="form-group-small">
+            <label for="zipcode">Código postal <span class="required">*</span></label>
+            <input type="text" id="zipcode" name="zipcode" class="form-control" required>
+          </div>
+
+          <div class="form-group-small">
+            <label for="province">Provincia <span class="required">*</span></label>
+            <select id="province" name="province" class="form-control" required>
+              <option value="">Provincia</option>
+              <option value="gba">Buenos Aires</option>
+              <option value="caba">CABA</option>
+              <option value="co">Córdoba</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="save-info" name="save-info">
+          <label for="save-info">Guardar esta información para futuras compras</label>
+        </div>
+      </section>
+      <div class="form-actions">
+        <a href="cart.html" class="continue-shopping">Volver al carrito</a>
+        <button type="submit" class="checkout-btn">Siguiente</button>
       </div>
-    </section>
 
-    <aside class="order-summary">
-        <div class="summary-product-list">
-            <div class="summary-product">
-                <div class="product-image">
-                    <img src="img/item-gomitas.jpg" alt="Gomitas de colágeno">
-                    <span class="product-quantity">2</span>
-                </div>
-                <div class="product-info">
-                    <p class="product-name">Gomitas de colágeno</p>
-                </div>
-                <span class="product-price">$ 14.000</span>
-            </div>
-            </div>
+    </div>
+    <aside class="summary-section">
 
-        <div class="coupon-section">
-            <input type="text" placeholder="Ingresa el cupón">
-            <button type="button" class="btn btn-secondary">Aplicar</button>
+      <div id="product-list-summary"></div>
+
+      <div class="cost-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="summary-subtotal">$ 0</strong>
         </div>
 
-        <div class="cost-breakdown">
-            <div class="cost-line">
-                <p>Subtotal</p>
-                <span>$ 14.000</span>
-            </div>
-            <div class="cost-line">
-                <p>Envío</p>
-                <span>Calcula en el siguiente paso</span>
-            </div>
-            <div class="cost-line total">
-                <p>Total</p>
-                <span>$ 14.000</span>
-            </div>
+        <div class="summary-row">
+          <span>Envío</span>
+          <span>Calcula en el siguiente paso</span>
         </div>
+
+        <hr>
+
+        <div class="summary-row total">
+          <span>Total</span>
+          <strong id="summary-total">$ 0</strong>
+        </div>
+      </div>
+
     </aside>
 
-  </main>
-  
+  </div>
+
+  </form>
+
+</main>
+</body>
+</html>
