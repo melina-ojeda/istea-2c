@@ -868,6 +868,21 @@ form {
     background-color: var(--color-secundario);
 }
 
+.success-message {
+    display: none;
+    position: fixed;
+    transform: translateX(-50%);
+    margin-left: 50px;
+    padding: 16px 30px;
+    border-radius: 8px;
+    z-index: 1000;
+    background-color: var(--color-strong-green);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 16px;
+
+}
+
 @media (max-width: 768px) {
     .contact-header h1 {
         font-size: 32px;
