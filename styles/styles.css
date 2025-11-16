@@ -920,8 +920,8 @@ form {
     padding-bottom: 60px;
 }
 
-.contact-column {
-    padding: 20px;
+.contact-header {
+    margin-bottom: 15px;
 }
 
 .contact-header a{
@@ -931,10 +931,10 @@ form {
 .shipping-column {
     display: flex;
     flex-direction: column;
-    width: 50%;
     background-color: white;
     align-items: flex-start;
     order: 1;
+    margin-top: 15px;
 }
 
 .summary-section{
