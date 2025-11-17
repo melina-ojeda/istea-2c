@@ -7,6 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableName = "tblQjRt2noWsTKvzS";
   const airtableUrl = `https://api.airtable.com/v0/${baseId}/${tableName}`;
 
+  function addItemMessage (msg) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList('.success-message');
+    msgDiv.textContent(msg);
+
+    document.body.appendChild(msgDiv);
+    setTimeout() => {
+      msgDiv.remove(3000);
+    }
+  }
+
   function getCodeProductFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('code');
@@ -64,6 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     catch (error) {
         console.error('Error fetching products from Airtable:', error);
     } 
+
+    addItemMessage('¡Producto agregado al carrito!');
   }
   getProductDetail(productCode);
 });

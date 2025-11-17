@@ -872,7 +872,7 @@ form {
     display: none;
     position: fixed;
     transform: translateX(-50%);
-    margin-left: 50px;
+    margin-left: 70px;
     padding: 16px 30px;
     border-radius: 8px;
     z-index: 1000;
@@ -945,11 +945,8 @@ form {
     order: 2;
 }
 
-/* ----------------------------- */
-/* HALF INPUTS (Nombre, Apellido) */
-/* ----------------------------- */
 .form-group-half {
-    flex: 1 1 48%; /* 🔧 antes se sobrescribía; ahora sí es mitad */
+    flex: 1 1 48%;
     min-width: 0;
 }
 
@@ -976,11 +973,8 @@ form {
     box-shadow: 0 0 0 3px rgba(126, 173, 100, 0.4);
 }
 
-/* ----------------------------- */
-/* SMALL INPUTS (Ciudad, CP...)  */
-/* ----------------------------- */
 .form-group-small {
-    flex: 1 1 28%; /* 🔧 ahora realmente son más chicos */
+    flex: 1 1 28%;
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
@@ -1011,22 +1005,11 @@ form {
     box-shadow: 0 0 0 3px rgba(126, 173, 100, 0.4);
 }
 
-/* ----------------------------- */
-/* FILAS DE INPUTS               */
-/* ----------------------------- */
 .form-row {
     display: flex;
     gap: 20px;
 }
 
-/* 🔧 ESTA ERA LA LÍNEA DEL PROBLEMA Y SE ELIMINA
-.form-group-half,
-.form-group-small {
-    flex: 1;
-}
-*/
-
-/* ----------------------------- */
 .form-input,
 .form-control,
 select {
