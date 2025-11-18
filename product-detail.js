@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     msgDiv.textContent(msg);
 
     document.body.appendChild(msgDiv);
-    setTimeout() => {
-      msgDiv.remove(3000);
-    }
+    setTimeout(() => {
+      msgDiv.remove();
+    }, 3000);
   }
 
   function getCodeProductFromURL() {
