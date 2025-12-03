@@ -864,6 +864,11 @@ form {
     transition: background-color 0.3s ease;
 }
 
+.submit-button a{
+    color: white;
+    text-decoration: none;
+}
+
 .submit-button:hover {
     background-color: var(--color-secundario);
 }
