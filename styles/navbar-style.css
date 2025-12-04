@@ -100,11 +100,11 @@
 .carrito:hover{
     transform: scale(1.1);
 }
-
+/*
 @media (max-width: 975px){
     .navbar {
-        display: grid; /*desktop flex y vistas chicas grid porque el logo no se me centraba y me pareció mejor ubicar el menú del lado izq como está en varias paginas*/
-        grid-template-columns: 1fr auto 1fr; /*tres columnas una para cada componente*/
+        display: grid; /*desktop flex y vistas chicas grid porque el logo no se me centraba y me pareció mejor ubicar el menú del lado izq como está en varias paginas
+        grid-template-columns: 1fr auto 1fr; /*tres columnas una para cada componente
         align-items: center;
     }
     
@@ -131,9 +131,9 @@
         flex-direction: column;
         grid-column: 1;
         position: absolute;
-        top: 111%; /*lo mas alineado posible al nav asi no le da toc al profe*/
+        top: 111%; /*lo mas alineado posible al nav asi no le da toc al profe*
         left: 0;
-        width: 40%; /*debería rellenar el fondo de todo el menu pero no lo hace?*/
+        width: 40%; /*debería rellenar el fondo de todo el menu pero no lo hace?*
         align-items: center;
         text-align: center;
         background-color: var(--menu-mobile-background);
@@ -163,4 +163,4 @@
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
-}
+}*/
