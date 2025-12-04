@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+  <title>Bocaditos Chulos</title>
+  <link rel="icon" type="/img/logo.png" href="/images/favicon.ico">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <header class="header" id="the-header">
+    <nav class="navbar">
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+       <label for="menu-toggle" class="menu-btn">
+        <img src="img/list.svg" alt="abrir menú" class="open-menu">
+        <img src="img/x.svg" alt="cerrar menú" class="close-menu">
+       </label>
+       
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="logo del sitio">
+      </a>
+
+      <div class="right-section">
+      <ul class="nav-links">
+        <li><a href="products.html">Productos</a></li>
+        <li><a href="about-us.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+      </div>
+
+      <div class="icons">
+      <a href="login.html" class="profile-btn">
+        <img src="img/usericon.svg" alt="icono de usuario" class="user-icon">
+      </a>
+      <a href="cart.html" class="cart-btn">
+        <img src="img/cart3.svg" alt="carrito" class="carrito">
+      </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <section class="admin-container">
+
+        <h1>Panel de administración</h1>
+        <div class="new-product">
+            <button id="btn-create-product" class="submit-button">+ Nuevo Producto</button>
+        </div>
+
+        <table class="admin-table" cellspacing="0">
+          <thead>
+            <tr>
+            <th scope="col" class="product-name">Producto</th>
+            <th scope="col" class="product-desc">Descripcion</th>
+            <th scope="col" class="product-cat">Categoria</th>
+            <th scope="col" class="product-stock">Stock</th>
+            <th scope="col" class="product-price">Precio</th>
+            <th scope="col" class="product-actions">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+          </tbody>
+        </table>
+    </section>
+    
+    <div id="modal-container" class="modal-container">
+    
+        <div class="modal-content">
+
+            <h2>Agregar Nuevo Producto</h2>
+            
+            <form id="create-product-form">
+                <div class="form-group">
+                    <label>Nombre del Producto</label>
+                    <input type="text" id="new-name" required class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea id="new-desc" required class="form-control"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group-small">
+                        <label>Categoría</label>
+                        <select id="new-category" class="form-control">
+                            <option value="Perros">Perros</option>
+                            <option value="Gatos">Gatos</option>
+                            <option value="Ambos">Ambos</option>
+                        </select>
+                    </div>
+                    <div class="form-group-small">
+                        <label>Stock</label>
+                        <input type="number" id="new-stock" required class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Precio</label>
+                    <input type="number" id="new-price" required class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>URL de la imagen</label>
+                    <input type="url" id="new-img" placeholder="https://ejemplo.com/foto.jpg" class="form-control">
+                </div>
+
+                <button type="submit" class="submit-button">Grabar en Airtable</button>
+            </form>
+        </div>
+    </div>
+  </main>
+
+   <footer>  
+    <div class="logo-footer">
+      <img src="img/logo.png" alt="logo del sitio">
+    </div>
+    <div class="first-column">
+      <p>Explorar</p>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Productos</a>
+      <a href="#">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <div class="second-column">
+      <p>Contacto</p>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+</footer>
+</body>
+<script src="admin.js"> </script>
+</html>
