@@ -7,13 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const airtableUrl = `https://api.airtable.com/v0/${baseId}/${tableName}`;
 
   function addItemMessage (msg) {
-    const msgDiv = document.createElement('div');
-    msgDiv.classList('.success-message');
-    msgDiv.textContent(msg);
+    const msgDiv = document.querySelector('.success-message') || document.createElement('div');
+    
+    if (!msgDiv){
+      console.error('No se encontró el contenedor de mensajes.');
+      return;
+    }
 
-    document.body.appendChild(msgDiv);
+    msgDiv.textContent = msg;
+    msgDiv.style.display = 'block';
+    msgDiv.classList.add('show');
+
     setTimeout(() => {
-      msgDiv.remove();
+      msgDiv.classList.remove('show');
+      setTimeout(() => {
+        msgDiv.style.display = 'none';
+      }, 500);
     }, 3000);
   }
 
@@ -66,8 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.id === cartItem.id);
+        if (existingItem) {
+            existingItem.quantity += quantity;
+        } else {
         cart.push(cartItem);
+        }
         localStorage.setItem('cart', JSON.stringify(cart));
+        addItemMessage(`¡${product.name} agregado al carrito!`);
         //window.location.href = 'cart.html';
         });
     } 
@@ -75,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error fetching products from Airtable:', error);
     } 
 
-    addItemMessage('¡Producto agregado al carrito!');
   }
   getProductDetail(productCode);
 });

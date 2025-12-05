@@ -913,6 +913,26 @@ footer a {
     border-radius: 5px;
 }
 
+.success-message {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-strong-green);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(100px);
+}
+
+.success-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 /*----------------------------LANDING NOSOTROS--------------------------------*/
