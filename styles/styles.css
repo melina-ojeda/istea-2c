@@ -428,19 +428,28 @@ footer a {
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 50vh; 
+        min-height: auto;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .hero img{
+        height: 300px; 
     }
     
     .hero-text{
-        padding: 25px 30px; 
-        max-width: 80%; 
-        left: 50%;
-        top: 50%; 
-        transform: translate(-50%, -50%); 
+        position: relative;
+        padding: 25px 20px; 
+        max-width: 100%; 
+        left: 0;
+        top: 0; 
+        transform: none; 
+        box-shadow: none;
+        background-color: var(--color-grey);
     }
     
     .hero-text h1{
-        font-size: 30px; 
+        font-size: 28px; 
     }
 
     .hero-text p{
@@ -452,13 +461,12 @@ footer a {
     }
 
     .info-section {
-        grid-template-columns: 1fr 1fr; 
-        padding: 20px 30px; 
-        height: auto; 
-        gap: 20px;
+        grid-template-columns: 1fr; 
+        padding: 30px 20px; 
+        gap: 40px;
     }
     .first-item h2, .second-item h2, .third-item h2 {
-        font-size: 18px; 
+        font-size: 20px; 
     }
 
     .btn-hero {
@@ -505,25 +513,32 @@ footer a {
 
 .info-section{
     background-color: var(--color-primario);
-    padding: 30px 60px;
+    padding: 40px 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
-    align-items: center;
+    gap: 30px;
+    align-items: start;
     width: 95%;
     max-width: 1400px;
     margin: 0 auto;
     height: auto;
+    border-radius: 10px;
 }
 
 .first-item, .second-item , .third-item{
-    justify-items: center;
+    text-align: center;
     color: white;
+    padding: 5px;
 }
 
 .first-item h2, .second-item h2, .third-item h2{
     font-size: 22px;
     font-weight: 600;
+}
+
+.first-item p, .second-item p, .third-item p {
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 /*------------------------ GRILLA PRODUCTOS HOME --------------------------*/
@@ -547,7 +562,7 @@ footer a {
 
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
     justify-items: center;
     align-items: start;
@@ -595,23 +610,7 @@ footer a {
     color: var(--color-strong-green);
 }
 
-@media (max-width: 1024px) {
-  .products-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
-@media (max-width: 768px) {
-  .products-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .products-container {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 /*--------------------- COMPONENTE CONOCE MAS ------------------------*/
