@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // DOM ELEMENTS
 
-const productsDomElements = document.querySelector('.products-grid');
+const productsDomElements = document.querySelector('.products-grid, .products-container');
 const inputSearch = document.querySelector('.search-products');
 const categoryChecks = document.querySelectorAll('input[name="opciones"]');
 
