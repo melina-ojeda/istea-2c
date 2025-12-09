@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function addItemMessage (msg) {
     const msgDiv = document.querySelector('.success-message') || document.createElement('div');
     
-    if (!msgDiv){
+    /*if (!msgDiv){
       console.error('No se encontró el contenedor de mensajes.');
       return;
-    }
+    }*/
 
     msgDiv.textContent = msg;
     msgDiv.style.display = 'block';

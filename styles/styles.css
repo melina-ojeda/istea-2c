@@ -170,7 +170,6 @@ body{
 }
 
 @media (max-width: 768px) {
-    /* Ajuste de altura */
     .header {
         padding: 5px 0; 
     }
@@ -182,7 +181,6 @@ body{
         padding: 5px 20px;
     }
     
-    /* Alineación */
     .logo {
         grid-column: 2;
         justify-self: center;
@@ -201,7 +199,6 @@ body{
         gap: 10px;
     }
 
-    /* Tamaño */
     .logo img {
         height: 50px; 
         width: 50px;
@@ -236,7 +233,6 @@ body{
 }
 
 @media (max-width: 576px) {
-    /* Ajuste de altura */
     .header {
         padding: 3px 0; 
     }
@@ -244,7 +240,6 @@ body{
         padding: 3px 10px; 
     }
     
-    /* Tamaño */
     .logo img {
         height: 45px; 
         width: 45px;
@@ -1565,6 +1560,7 @@ form {
     align-items: flex-start;
     order: 1;
     margin-top: 15px;
+    width: 100%;;
 }
 
 .summary-section{
