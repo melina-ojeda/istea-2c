@@ -143,14 +143,13 @@ body{
 }
 
 .user-icon{
-    width: 42px;
+    width: 48px;
     cursor: pointer;
     padding: 50px;
 }
 
-.user-icon{
+.user-icon:hover{
     transform: scale(1.1);
-    cursor: pointer;
 }
 
 .icons{
@@ -260,7 +259,7 @@ body{
         height: 18px;
     }
     .user-icon {
-        width: 25px; 
+        width: 35px; 
     }
     .menu-btn img {
         width: 25px;
@@ -469,8 +468,9 @@ footer a {
     .info-section {
         grid-template-columns: 1fr; 
         padding: 30px 20px; 
-        gap: 40px;
+        gap: 20px;
     }
+
     .first-item h2, .second-item h2, .third-item h2 {
         font-size: 20px; 
     }
@@ -525,8 +525,8 @@ footer a {
     gap: 30px;
     align-items: start;
     width: 95%;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 0;
     height: auto;
     border-radius: 10px;
 }
